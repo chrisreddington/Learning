@@ -5,12 +5,12 @@ on:
     branches: [ main ]
     paths:
       - "rust/hello-world/**"
-      - ".github/workflows/rust-helloworld.yml"
+      - ".github/workflows/rust-hello-world.yml"
   pull_request:
     branches: [ main ]
     paths:
       - "rust/hello-world/**"
-      - ".github/workflows/rust-helloworld.yml"
+      - ".github/workflows/rust-hello-world.yml"
 
 jobs:
   build:
