@@ -6,7 +6,7 @@ edition = "2018"
 
 [lib]
 name = "hello_lib"
-path = "src/main.rs"
+path = "src/lib.rs"
 crate-type =["cdylib"]
 
 [dependencies]
