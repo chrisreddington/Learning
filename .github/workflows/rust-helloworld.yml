@@ -1,0 +1,23 @@
+name: "Rust Hello World Sample"
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "rust/hello-world"
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "rust/hello-world"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: cargo build --verbose --manifest-path rust/hello-world
+    - name: Run
+      run: cargo run --verbose --manifest-path rust/hello-world
