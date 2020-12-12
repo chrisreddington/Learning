@@ -1,0 +1,25 @@
+name: "Rust Hello World Sample"
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "rust/lib/**"
+      - ".github/workflows/rust-lib.yml"
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "rust/lib/**"
+      - ".github/workflows/rust-helloworld.yml"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: cargo build --verbose --manifest-path rust/lib/Cargo.toml
+    - name: Run
+      run: cargo run --verbose --manifest-path rust/lib/Cargo.toml
