@@ -20,6 +20,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: cargo build --verbose --manifest-path rust/hello-world
+      run: cargo build --verbose --manifest-path rust/hello-world/cargo.toml
     - name: Run
-      run: cargo run --verbose --manifest-path rust/hello-world
+      run: cargo run --verbose --manifest-path rust/hello-world/cargo.toml
