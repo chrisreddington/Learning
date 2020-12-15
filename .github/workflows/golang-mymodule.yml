@@ -1,4 +1,4 @@
-name: "Rust Hello World Sample"
+name: "Go Web Server Sample"
 
 on:
   push:
@@ -32,4 +32,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: webserver-binary
-          path: ${{ env.working_directory }}/webserver.exe
+          path: ${{ env.working-directory }}/webserver.exe
